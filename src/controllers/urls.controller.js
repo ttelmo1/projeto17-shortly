@@ -68,7 +68,7 @@ export async function openShortUrl(req, res){
         const [ url ] = rows;
 
         await db.query(`
-            UPDATE short SET views = views + 1 WHERE id = $1`,
+            UPDATE short SET visitCount = visitCount + 1 WHERE id = $1`,
             [url.id]
         );
 

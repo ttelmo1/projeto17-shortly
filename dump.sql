@@ -12,7 +12,7 @@ CREATE TABLE "short" (
 	"shortUrl" TEXT NOT NULL,
 	"userId" integer NOT NULL REFERENCES "users"("id"),
 	"createdAt" TIMESTAMP NOT NULL DEFAULT NOW(),
-	"views" integer NOT NULL DEFAULT 0
+	"visitCount" integer NOT NULL DEFAULT 0
 );
 
 CREATE TABLE "sessions"(
