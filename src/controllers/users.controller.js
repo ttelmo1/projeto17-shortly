@@ -55,7 +55,7 @@ export async function getUserById(req, res) {
             id: user.id,
             name: user.name,
             visitCount: visitCount.sum || 0,
-            shortenedUrls: [urlResult.rows[0]]
+            shortenedUrls: urlResult.rows
         })
 
 
