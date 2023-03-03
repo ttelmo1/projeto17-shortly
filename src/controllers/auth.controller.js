@@ -32,7 +32,7 @@ export async function signin(req, res) {
             [token, user.id]
         );
 
-        res.send(token);
+        res.send({token});
         
     }
     catch(err){
