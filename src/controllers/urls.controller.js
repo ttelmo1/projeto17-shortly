@@ -82,7 +82,7 @@ export async function openShortUrl(req, res){
 
 export async function deleteShortUrl(req, res){
     const { id } = req.params;
-    const { user } = res.locals.user;
+    const { user } = res.locals;
 
     try{
         const result = await db.query(
