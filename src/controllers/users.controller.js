@@ -36,7 +36,7 @@ export async function getUserById(req, res) {
     try{
         const visit = await db.query(
             `
-            SELECT SUM(visitCount)
+            SELECT SUM("visitCount")
             FROM short s
             WHERE s."userId" = $1`,
             [user.id]
