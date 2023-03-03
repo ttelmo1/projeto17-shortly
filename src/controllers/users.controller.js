@@ -71,7 +71,7 @@ export async function ranking(req, res) {
                 u.id,
                 u.name,
                 COUNT (s.id) AS "linksCount",
-                COALESCE(SUM(s.visitCount), 0) AS "visitCount"
+                COALESCE(SUM(s."visitCount"), 0) AS "visitCount"
             FROM users u
             LEFT JOIN short s ON s."userId" = u.id
             GROUP BY u.id
