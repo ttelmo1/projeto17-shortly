@@ -39,7 +39,7 @@ export async function getShortUrlById(req, res){
 
         const shortUrl = {
             id: url.id,
-            shortURL: url.shortURL,
+            shortUrl: url.shortUrl,
             url: url.url,
         };
 
@@ -52,13 +52,13 @@ export async function getShortUrlById(req, res){
 
 
 export async function openShortUrl(req, res){
-    const { shortURL } = req.params;
+    const { shortUrl } = req.params;
 
     try{
         const { rows } = await db.query(
             `
-            SELECT * FROM short WHERE "shortURL" = $1`,
-            [shortURL]
+            SELECT * FROM short WHERE "shortUrl" = $1`,
+            [shortUrl]
         );
 
         if(rows.length === 0){
