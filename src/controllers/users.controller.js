@@ -32,8 +32,7 @@ export async function createUser(req, res) {
 }
 
 export async function getUserById(req, res) {
-    const { user } = res.locals.user;
-
+    const { user } = res.locals;
     try{
         const visit = await db.query(
             `
