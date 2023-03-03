@@ -51,13 +51,13 @@ export async function getUserById(req, res) {
             [user.id]
         );
 
-        // console.log(urlResult.rows[0])
+        console.log([urlResult.rows[0]])
 
         res.send({
             id: user.id,
             name: user.name,
             visitCount: visitCount.sum || 0,
-            shortenedUrls: urlResult.rows[0]
+            shortenedUrls: [urlResult.rows[0]]
         })
 
 
