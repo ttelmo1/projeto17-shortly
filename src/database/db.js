@@ -12,4 +12,4 @@ if(process.env.NODE_ENV === 'prod') {
     configDatabase.ssl = true
 }
 
-export const db = new Pool(configDatabase);image.png
+export const db = new Pool(configDatabase);
